@@ -1,0 +1,6 @@
+framework module Purse {
+  umbrella header "Purse-umbrella.h"
+
+  export *
+  module * { export * }
+}
