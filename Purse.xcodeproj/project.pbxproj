@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DC389B47208FFD9C0020EAD0 /* Purse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC389B3D208FFD9B0020EAD0 /* Purse.framework */; };
-		DC389B4C208FFD9C0020EAD0 /* PurseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B4B208FFD9C0020EAD0 /* PurseTests.swift */; };
-		DC389B4E208FFD9C0020EAD0 /* Purse.h in Headers */ = {isa = PBXBuildFile; fileRef = DC389B40208FFD9C0020EAD0 /* Purse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC389B5D208FFE5C0020EAD0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC389B58208FFE5B0020EAD0 /* Info.plist */; };
+		DC389B5E208FFE5C0020EAD0 /* Purse.h in Headers */ = {isa = PBXBuildFile; fileRef = DC389B59208FFE5B0020EAD0 /* Purse.h */; };
+		DC389B64208FFE6D0020EAD0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC389B62208FFE6D0020EAD0 /* Info.plist */; };
+		DC389B65208FFE6D0020EAD0 /* PurseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B63208FFE6D0020EAD0 /* PurseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +26,11 @@
 
 /* Begin PBXFileReference section */
 		DC389B3D208FFD9B0020EAD0 /* Purse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Purse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC389B40208FFD9C0020EAD0 /* Purse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Purse.h; sourceTree = "<group>"; };
-		DC389B41208FFD9C0020EAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC389B46208FFD9C0020EAD0 /* PurseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC389B4B208FFD9C0020EAD0 /* PurseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurseTests.swift; sourceTree = "<group>"; };
-		DC389B4D208FFD9C0020EAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC389B58208FFE5B0020EAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC389B59208FFE5B0020EAD0 /* Purse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Purse.h; sourceTree = "<group>"; };
+		DC389B62208FFE6D0020EAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC389B63208FFE6D0020EAD0 /* PurseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +55,8 @@
 		DC389B33208FFD9B0020EAD0 = {
 			isa = PBXGroup;
 			children = (
-				DC389B3F208FFD9B0020EAD0 /* Purse */,
-				DC389B4A208FFD9C0020EAD0 /* PurseTests */,
+				DC389B57208FFE5B0020EAD0 /* Sources */,
+				DC389B61208FFE6D0020EAD0 /* Tests */,
 				DC389B3E208FFD9B0020EAD0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,22 +70,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DC389B3F208FFD9B0020EAD0 /* Purse */ = {
+		DC389B57208FFE5B0020EAD0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DC389B40208FFD9C0020EAD0 /* Purse.h */,
-				DC389B41208FFD9C0020EAD0 /* Info.plist */,
+				DC389B58208FFE5B0020EAD0 /* Info.plist */,
+				DC389B59208FFE5B0020EAD0 /* Purse.h */,
 			);
-			path = Purse;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		DC389B4A208FFD9C0020EAD0 /* PurseTests */ = {
+		DC389B61208FFE6D0020EAD0 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DC389B4B208FFD9C0020EAD0 /* PurseTests.swift */,
-				DC389B4D208FFD9C0020EAD0 /* Info.plist */,
+				DC389B62208FFE6D0020EAD0 /* Info.plist */,
+				DC389B63208FFE6D0020EAD0 /* PurseTests.swift */,
 			);
-			path = PurseTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +95,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC389B4E208FFD9C0020EAD0 /* Purse.h in Headers */,
+				DC389B5E208FFE5C0020EAD0 /* Purse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC389B5D208FFE5C0020EAD0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC389B64208FFE6D0020EAD0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC389B4C208FFD9C0020EAD0 /* PurseTests.swift in Sources */,
+				DC389B65208FFE6D0020EAD0 /* PurseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
