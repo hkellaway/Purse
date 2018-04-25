@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		DC389B47208FFD9C0020EAD0 /* Purse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC389B3D208FFD9B0020EAD0 /* Purse.framework */; };
 		DC389B5E208FFE5C0020EAD0 /* Purse.h in Headers */ = {isa = PBXBuildFile; fileRef = DC389B59208FFE5B0020EAD0 /* Purse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC389B65208FFE6D0020EAD0 /* PurseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B63208FFE6D0020EAD0 /* PurseTests.swift */; };
+		DC389B65208FFE6D0020EAD0 /* DirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B63208FFE6D0020EAD0 /* DirectoryTests.swift */; };
 		DC389B67208FFEF60020EAD0 /* Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B66208FFEF60020EAD0 /* Purse.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +29,7 @@
 		DC389B58208FFE5B0020EAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC389B59208FFE5B0020EAD0 /* Purse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Purse.h; sourceTree = "<group>"; };
 		DC389B62208FFE6D0020EAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC389B63208FFE6D0020EAD0 /* PurseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurseTests.swift; sourceTree = "<group>"; };
+		DC389B63208FFE6D0020EAD0 /* DirectoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTests.swift; sourceTree = "<group>"; };
 		DC389B66208FFEF60020EAD0 /* Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				DC389B62208FFE6D0020EAD0 /* Info.plist */,
-				DC389B63208FFE6D0020EAD0 /* PurseTests.swift */,
+				DC389B63208FFE6D0020EAD0 /* DirectoryTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -206,7 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC389B65208FFE6D0020EAD0 /* PurseTests.swift in Sources */,
+				DC389B65208FFE6D0020EAD0 /* DirectoryTests.swift in Sources */,
 				DC389B67208FFEF60020EAD0 /* Purse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
