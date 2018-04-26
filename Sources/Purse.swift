@@ -101,8 +101,8 @@ public struct Purse: DiskPersistence {
             throw PurseError.invalidFileName(value: fileName)
         }
         
-        let url = try urlConstructor.createURL(fileName: fileName, in: directory)
         let data = try jsonEncoder.encode(object)
+        let url = try fileSystem.url(fileName: fileName, in: directory)
         try fileSystem.createDirectoryIfNeeded(at: url)
         try data.write(to: url, options: .atomic)
         return

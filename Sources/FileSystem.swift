@@ -28,6 +28,15 @@ import Foundation
 /// Enables manipulation of files on disk.
 public protocol FileSystem {
     
+    /// Constructs URL given desired file name and Directory type.
+    ///
+    /// - Parameters:
+    ///   - fileName: File name.
+    ///   - directory: Directory.
+    /// - Returns: URL if able to construct, nil otherwise.
+    /// - Throws: Error if issue constructing URL.
+    func url(fileName: FileName, in directory: Purse.Directory) throws -> URL
+    
     /// URL for shared container of provided app group.
     ///
     /// - Parameter appGroupName: App group name.
@@ -51,6 +60,12 @@ public protocol FileSystem {
     /// - Throws: Error if issue creating directory.
     func createDirectoryIfNeeded(at url: URL) throws
     
+    /// Checks if a directory exists at the provided path.
+    ///
+    /// - Parameter path: Path.
+    /// - Returns: True if directory exists, false otherwise.
+    func directoryExists(atPath path: String) -> Bool
+    
 }
 
 /// Default Purse FileSystem.
@@ -69,13 +84,50 @@ public class PurseFileSystem: FileSystem {
     
     // MARK: - Init
     
-    private init(fileManager: FileManager = FileManager.default) {
+    public init(fileManager: FileManager = FileManager.default) {
         self.fileManager = fileManager
     }
     
     // MARK: - Protocol conformance
     
     // MARK: FileSystem
+    
+    public func url(fileName: FileName, in directory: Purse.Directory) throws -> URL {
+        guard let path = fileName.prepareForUseInFilePath() else {
+            throw PurseError.invalidFileName(value: fileName)
+        }
+        
+        let fileLocation: URL
+        
+        switch directory {
+        case .applicationSupport, .caches, .documents:
+            guard let url = userHomeURL(toDirectory: directory) else {
+                throw PurseError.couldNotAccessUserDomainMask
+            }
+            
+            fileLocation = url
+        case .sharedContainer(let appGroupName):
+            guard let url = appGroupContainerURL(appGroupName: appGroupName) else {
+                throw PurseError.couldNotAccessSharedContainer(appGroupName: appGroupName)
+            }
+            
+            fileLocation = url
+        case .temporary:
+            guard let url = temporaryDirectoryURL() else {
+                throw PurseError.couldNotAccessTemporaryDirectory
+            }
+            
+            fileLocation = url
+        }
+        
+        guard let url = fileLocation
+            .appendPathIfPossible(path: path, isDirectory: false)
+            .prependFileIdentifierIfNotPresent() else {
+                throw PurseError.couldNotCreateURLForFileName(fileName: fileName, directory: directory)
+        }
+        
+        return url
+    }
     
     public func appGroupContainerURL(appGroupName: String) -> URL? {
         return fileManager.containerURL(forSecurityApplicationGroupIdentifier: appGroupName)
@@ -100,7 +152,7 @@ public class PurseFileSystem: FileSystem {
         }
         
         guard let directory = searchPathDirectory else {
-            assertionFailure("[Purse] Unexpected directory type for userHomeURL(:)")
+            assertionFailure("[Purse] Unexpected Directory type for userHomeURL(:)")
             return nil
         }
         
@@ -110,13 +162,23 @@ public class PurseFileSystem: FileSystem {
     public func createDirectoryIfNeeded(at url: URL) throws {
         let folderURL = url.deletingLastPathComponent()
         
-        if fileManager.directoryExists(atPath: folderURL.path) {
+        if directoryExists(atPath: folderURL.path) {
             return
         }
         
         try fileManager.createDirectory(at: folderURL,
                                         withIntermediateDirectories: true,
                                         attributes: nil)
+    }
+    
+    public func directoryExists(atPath path: String) -> Bool {
+        var isDirectory: ObjCBool = false
+        
+        if fileManager.fileExists(atPath: path, isDirectory: &isDirectory) {
+            return isDirectory.boolValue
+        } else {
+            return false
+        }
     }
     
 }

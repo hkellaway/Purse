@@ -47,7 +47,7 @@ public extension FileName {
     
     /// Prepares a file name for use in a file path.
     ///
-    /// - Returns: <#return value description#>
+    /// - Returns: File name if valid for file path, nil otherwise.
     func prepareForUseInFilePath() -> FileName? {
         let clean = FileName.removeSlashesFromBeginning(
             ofFileName: withoutCharacters(inSet: .invalidPathCharacters)

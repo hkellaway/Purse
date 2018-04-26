@@ -11,7 +11,7 @@ import Foundation
 import XCTest
 @testable import Purse
 
-final class FakeFileSystem: FileSystem {
+final class FakeFileSystem: PurseFileSystem {
     
     var appGroupURL: URL? = nil
     var applicationSupportURL: URL? = nil
@@ -20,17 +20,19 @@ final class FakeFileSystem: FileSystem {
     var tempURL: URL? = nil
     var userHomeURL: URL? = nil
     
-    init() { }
+    init() {
+        super.init()
+    }
     
-    func appGroupContainerURL(appGroupName: String) -> URL? {
+    override func appGroupContainerURL(appGroupName: String) -> URL? {
         return appGroupURL
     }
     
-    func temporaryDirectoryURL() -> URL? {
+    override func temporaryDirectoryURL() -> URL? {
         return tempURL
     }
     
-    func userHomeURL(toDirectory directory: Purse.Directory) -> URL? {
+    override func userHomeURL(toDirectory directory: Purse.Directory) -> URL? {
         switch directory {
         case .applicationSupport:
             return applicationSupportURL
@@ -43,7 +45,7 @@ final class FakeFileSystem: FileSystem {
         }
     }
     
-    func createDirectoryIfNeeded(at url: URL) throws {
+    override func createDirectoryIfNeeded(at url: URL) throws {
         return
     }
     
