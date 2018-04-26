@@ -25,23 +25,32 @@
 
 import Foundation
 
+/// Constructs URLs to locations on disk.
 public protocol URLConstructor {
     
+    /// Creates URL of file in provided directory type.
+    ///
+    /// - Parameters:
+    ///   - fileName: File name.
+    ///   - directory: Directory.
+    /// - Returns: URL if created successfully, false otherwise.
+    /// - Throws: Error if issue constructing URL.
     func createURL(fileName: FileName, in directory: Purse.Directory) throws -> URL
     
 }
 
+/// Default Purse URL
 public final class PurseURLConstructor: URLConstructor {
     
     // MARK: - Properties
     
-    /// File manager.
-    public let fileManager: FileManager
+    /// File system.
+    public let fileSystem: FileSystem
     
     // MARK: - Init
     
-    public init(fileManager: FileManager = FileManager.default) {
-        self.fileManager = fileManager
+    public init(fileSystem: FileSystem = PurseFileSystem.shared) {
+        self.fileSystem = fileSystem
     }
     
     // MARK: - Protocol Conformance
@@ -56,20 +65,20 @@ public final class PurseURLConstructor: URLConstructor {
         let fileLocation: URL
         
         switch directory {
-        case .applicationSupport:
-            fileLocation = try userHomeDirectoryURL(toSearchPathDirectory: .applicationSupportDirectory)
-        case .caches:
-            fileLocation = try userHomeDirectoryURL(toSearchPathDirectory: .cachesDirectory)
-        case .documents:
-            fileLocation = try userHomeDirectoryURL(toSearchPathDirectory: .documentDirectory)
+        case .applicationSupport, .caches, .documents:
+            guard let url = fileSystem.userHomeURL(toDirectory: directory) else {
+                throw PurseError.couldNotAccessUserDomainMask
+            }
+            
+            fileLocation = url
         case .sharedContainer(let appGroupName):
-            guard let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: appGroupName) else {
-                throw PurseError.couldNotAccessSharedContainer(appGroupName: appGroupName)
+            guard let url = fileSystem.appGroupContainerURL(appGroupName: appGroupName) else {
+                 throw PurseError.couldNotAccessSharedContainer(appGroupName: appGroupName)
             }
 
             fileLocation = url
         case .temporary:
-            guard let url = URL(string: NSTemporaryDirectory()) else {
+            guard let url = fileSystem.temporaryDirectoryURL() else {
                 throw PurseError.couldNotAccessTemporaryDirectory
             }
 
@@ -80,18 +89,6 @@ public final class PurseURLConstructor: URLConstructor {
             .appendPathIfPossible(path: path, isDirectory: false)
             .prependFileIdentifierIfNotPresent() else {
             throw PurseError.couldNotCreateURLForFileName(fileName: fileName, directory: directory)
-        }
-        
-        return url
-    }
-    
-    // MARK: - Instance functions
-    
-    // MARK: Private instance functions
-    
-    private func userHomeDirectoryURL(toSearchPathDirectory searchPathDirectory: FileManager.SearchPathDirectory) throws -> URL {
-        guard let url = fileManager.userHomeDirectoryURL(toSearchPathDirectory: searchPathDirectory) else {
-            throw PurseError.couldNotAccessUserDomainMask
         }
         
         return url

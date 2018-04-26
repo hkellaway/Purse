@@ -10,7 +10,7 @@
 		DC389B47208FFD9C0020EAD0 /* Purse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC389B3D208FFD9B0020EAD0 /* Purse.framework */; };
 		DC389B5E208FFE5C0020EAD0 /* Purse.h in Headers */ = {isa = PBXBuildFile; fileRef = DC389B59208FFE5B0020EAD0 /* Purse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC389B65208FFE6D0020EAD0 /* DirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B63208FFE6D0020EAD0 /* DirectoryTests.swift */; };
-		DC389B8920902F780020EAD0 /* FolderCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B8820902F780020EAD0 /* FolderCreator.swift */; };
+		DC389B8920902F780020EAD0 /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B8820902F780020EAD0 /* FileSystem.swift */; };
 		DC389B8B20902FA50020EAD0 /* URLConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B8A20902FA50020EAD0 /* URLConstructor.swift */; };
 		DC389B8D20902FC70020EAD0 /* PurseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B8C20902FC70020EAD0 /* PurseError.swift */; };
 		DC389B8F20902FF30020EAD0 /* FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B8E20902FF30020EAD0 /* FileName.swift */; };
@@ -42,7 +42,7 @@
 		DC389B62208FFE6D0020EAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC389B63208FFE6D0020EAD0 /* DirectoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTests.swift; sourceTree = "<group>"; };
 		DC389B66208FFEF60020EAD0 /* Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purse.swift; sourceTree = "<group>"; };
-		DC389B8820902F780020EAD0 /* FolderCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCreator.swift; sourceTree = "<group>"; };
+		DC389B8820902F780020EAD0 /* FileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
 		DC389B8A20902FA50020EAD0 /* URLConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstructor.swift; sourceTree = "<group>"; };
 		DC389B8C20902FC70020EAD0 /* PurseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurseError.swift; sourceTree = "<group>"; };
 		DC389B8E20902FF30020EAD0 /* FileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileName.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 				DC389B95209034870020EAD0 /* FileManager+Purse.swift */,
 				DC389B8E20902FF30020EAD0 /* FileName.swift */,
 				DC389B902090300F0020EAD0 /* FileName+Purse.swift */,
-				DC389B8820902F780020EAD0 /* FolderCreator.swift */,
+				DC389B8820902F780020EAD0 /* FileSystem.swift */,
 				DC389B66208FFEF60020EAD0 /* Purse.swift */,
 				DC389B8C20902FC70020EAD0 /* PurseError.swift */,
 				DC389B9C20914E4D0020EAD0 /* String+Purse.swift */,
@@ -239,7 +239,7 @@
 				DC389B912090300F0020EAD0 /* FileName+Purse.swift in Sources */,
 				DC389B94209031580020EAD0 /* Purse.swift in Sources */,
 				DC389B98209039280020EAD0 /* CharacterSet+Purse.swift in Sources */,
-				DC389B8920902F780020EAD0 /* FolderCreator.swift in Sources */,
+				DC389B8920902F780020EAD0 /* FileSystem.swift in Sources */,
 				DC389B8F20902FF30020EAD0 /* FileName.swift in Sources */,
 				DC389B9F20915D820020EAD0 /* URL+Purse.swift in Sources */,
 				DC389B8D20902FC70020EAD0 /* PurseError.swift in Sources */,

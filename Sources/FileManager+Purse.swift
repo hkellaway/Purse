@@ -41,15 +41,4 @@ public extension FileManager {
         }
     }
     
-    /// URL to search path directory relative to the user's home directory (i.e. where user stores personal items (~))
-    /// - Parameter searchPathDirectory: Search path directory.
-    /// - Returns: URL if determinable, nil otherwise.
-    func userHomeDirectoryURL(toSearchPathDirectory searchPathDirectory: FileManager.SearchPathDirectory) -> URL? {
-        guard let url = urls(for: searchPathDirectory, in: .userDomainMask).first else {
-            return nil
-        }
-        
-        return url
-    }
-    
 }

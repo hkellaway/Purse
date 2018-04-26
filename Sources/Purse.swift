@@ -68,11 +68,8 @@ public struct Purse: DiskPersistence {
     
     // MARK: - Properties
     
-    /// File manager.
-    public let fileManager: FileManager
-    
-    /// Folder creator.
-    public let folderCreator: FolderCreator
+    /// File system.
+    public let fileSystem: FileSystem
     
     /// JSON encoding used to encode objects.
     public let jsonEncoder: JSONEncoder
@@ -82,12 +79,10 @@ public struct Purse: DiskPersistence {
     
     // MARK: - Init
     
-    public init(fileManager: FileManager = FileManager.default,
-                folderCreator: FolderCreator = PurseFolderCreator(),
+    public init(fileSystem: FileSystem = PurseFileSystem.shared,
                 jsonEncoder: JSONEncoder = JSONEncoder(),
                 urlConstructor: URLConstructor = PurseURLConstructor()) {
-        self.fileManager = fileManager
-        self.folderCreator = folderCreator
+        self.fileSystem = fileSystem
         self.jsonEncoder = jsonEncoder
         self.urlConstructor = urlConstructor
     }
@@ -108,7 +103,7 @@ public struct Purse: DiskPersistence {
         
         let url = try urlConstructor.createURL(fileName: fileName, in: directory)
         let data = try jsonEncoder.encode(object)
-        try folderCreator.createFolderIfNeeded(at: url)
+        try fileSystem.createDirectoryIfNeeded(at: url)
         try data.write(to: url, options: .atomic)
         return
     }

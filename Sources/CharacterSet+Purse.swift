@@ -27,7 +27,7 @@ import Foundation
 
 public extension CharacterSet {
     
-    /// Characters set of characters that shouldn't be present in a file path.
+    /// Set of characters that shouldn't be present in a file path.
     static var invalidPathCharacters: CharacterSet {
         var invalidPathCharacters = CharacterSet(charactersIn: ":")
         invalidPathCharacters.formUnion(.newlines)
