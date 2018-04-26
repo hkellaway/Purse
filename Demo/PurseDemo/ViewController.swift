@@ -10,12 +10,14 @@ import Purse
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var diskPersistence: DiskPersistence = Purse.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let purseDirectory: Purse.Directory = .documents
-        print(purseDirectory.description)
+        let test1 = Test(id: 1, name: "Test 1")
+        try? diskPersistence.persist(test1, to: .temporary, fileName: "test1.json")
     }
     
 }
