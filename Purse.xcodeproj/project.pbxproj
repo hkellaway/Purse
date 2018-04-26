@@ -22,6 +22,7 @@
 		DC389B9B20914D6E0020EAD0 /* URLConstructorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B9920914D520020EAD0 /* URLConstructorTests.swift */; };
 		DC389B9D20914E4D0020EAD0 /* String+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B9C20914E4D0020EAD0 /* String+Purse.swift */; };
 		DC389B9F20915D820020EAD0 /* URL+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B9E20915D820020EAD0 /* URL+Purse.swift */; };
+		DC389BA420917E2C0020EAD0 /* FakeFileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389BA220917DE30020EAD0 /* FakeFileSystem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		DC389B9920914D520020EAD0 /* URLConstructorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstructorTests.swift; sourceTree = "<group>"; };
 		DC389B9C20914E4D0020EAD0 /* String+Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Purse.swift"; sourceTree = "<group>"; };
 		DC389B9E20915D820020EAD0 /* URL+Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Purse.swift"; sourceTree = "<group>"; };
+		DC389BA220917DE30020EAD0 /* FakeFileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFileSystem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				DC389B62208FFE6D0020EAD0 /* Info.plist */,
 				DC389B63208FFE6D0020EAD0 /* DirectoryTests.swift */,
 				DC389B9920914D520020EAD0 /* URLConstructorTests.swift */,
+				DC389BA220917DE30020EAD0 /* FakeFileSystem.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC389B9B20914D6E0020EAD0 /* URLConstructorTests.swift in Sources */,
+				DC389BA420917E2C0020EAD0 /* FakeFileSystem.swift in Sources */,
 				DC389B65208FFE6D0020EAD0 /* DirectoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
