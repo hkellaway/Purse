@@ -10,7 +10,18 @@
 		DC389B47208FFD9C0020EAD0 /* Purse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC389B3D208FFD9B0020EAD0 /* Purse.framework */; };
 		DC389B5E208FFE5C0020EAD0 /* Purse.h in Headers */ = {isa = PBXBuildFile; fileRef = DC389B59208FFE5B0020EAD0 /* Purse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC389B65208FFE6D0020EAD0 /* DirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B63208FFE6D0020EAD0 /* DirectoryTests.swift */; };
-		DC389B67208FFEF60020EAD0 /* Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B66208FFEF60020EAD0 /* Purse.swift */; };
+		DC389B8920902F780020EAD0 /* FolderCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B8820902F780020EAD0 /* FolderCreator.swift */; };
+		DC389B8B20902FA50020EAD0 /* URLConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B8A20902FA50020EAD0 /* URLConstructor.swift */; };
+		DC389B8D20902FC70020EAD0 /* PurseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B8C20902FC70020EAD0 /* PurseError.swift */; };
+		DC389B8F20902FF30020EAD0 /* FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B8E20902FF30020EAD0 /* FileName.swift */; };
+		DC389B912090300F0020EAD0 /* FileName+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B902090300F0020EAD0 /* FileName+Purse.swift */; };
+		DC389B932090303B0020EAD0 /* DiskPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B922090303B0020EAD0 /* DiskPersistence.swift */; };
+		DC389B94209031580020EAD0 /* Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B66208FFEF60020EAD0 /* Purse.swift */; };
+		DC389B96209034870020EAD0 /* FileManager+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B95209034870020EAD0 /* FileManager+Purse.swift */; };
+		DC389B98209039280020EAD0 /* CharacterSet+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B97209039280020EAD0 /* CharacterSet+Purse.swift */; };
+		DC389B9B20914D6E0020EAD0 /* URLConstructorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B9920914D520020EAD0 /* URLConstructorTests.swift */; };
+		DC389B9D20914E4D0020EAD0 /* String+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B9C20914E4D0020EAD0 /* String+Purse.swift */; };
+		DC389B9F20915D820020EAD0 /* URL+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B9E20915D820020EAD0 /* URL+Purse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +42,17 @@
 		DC389B62208FFE6D0020EAD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC389B63208FFE6D0020EAD0 /* DirectoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTests.swift; sourceTree = "<group>"; };
 		DC389B66208FFEF60020EAD0 /* Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purse.swift; sourceTree = "<group>"; };
+		DC389B8820902F780020EAD0 /* FolderCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCreator.swift; sourceTree = "<group>"; };
+		DC389B8A20902FA50020EAD0 /* URLConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstructor.swift; sourceTree = "<group>"; };
+		DC389B8C20902FC70020EAD0 /* PurseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurseError.swift; sourceTree = "<group>"; };
+		DC389B8E20902FF30020EAD0 /* FileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileName.swift; sourceTree = "<group>"; };
+		DC389B902090300F0020EAD0 /* FileName+Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileName+Purse.swift"; sourceTree = "<group>"; };
+		DC389B922090303B0020EAD0 /* DiskPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskPersistence.swift; sourceTree = "<group>"; };
+		DC389B95209034870020EAD0 /* FileManager+Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Purse.swift"; sourceTree = "<group>"; };
+		DC389B97209039280020EAD0 /* CharacterSet+Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Purse.swift"; sourceTree = "<group>"; };
+		DC389B9920914D520020EAD0 /* URLConstructorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstructorTests.swift; sourceTree = "<group>"; };
+		DC389B9C20914E4D0020EAD0 /* String+Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Purse.swift"; sourceTree = "<group>"; };
+		DC389B9E20915D820020EAD0 /* URL+Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Purse.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +95,17 @@
 		DC389B57208FFE5B0020EAD0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DC389B97209039280020EAD0 /* CharacterSet+Purse.swift */,
+				DC389B922090303B0020EAD0 /* DiskPersistence.swift */,
+				DC389B95209034870020EAD0 /* FileManager+Purse.swift */,
+				DC389B8E20902FF30020EAD0 /* FileName.swift */,
+				DC389B902090300F0020EAD0 /* FileName+Purse.swift */,
+				DC389B8820902F780020EAD0 /* FolderCreator.swift */,
 				DC389B66208FFEF60020EAD0 /* Purse.swift */,
+				DC389B8C20902FC70020EAD0 /* PurseError.swift */,
+				DC389B9C20914E4D0020EAD0 /* String+Purse.swift */,
+				DC389B8A20902FA50020EAD0 /* URLConstructor.swift */,
+				DC389B9E20915D820020EAD0 /* URL+Purse.swift */,
 				DC389B58208FFE5B0020EAD0 /* Info.plist */,
 				DC389B59208FFE5B0020EAD0 /* Purse.h */,
 			);
@@ -85,6 +117,7 @@
 			children = (
 				DC389B62208FFE6D0020EAD0 /* Info.plist */,
 				DC389B63208FFE6D0020EAD0 /* DirectoryTests.swift */,
+				DC389B9920914D520020EAD0 /* URLConstructorTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -151,6 +184,7 @@
 				TargetAttributes = {
 					DC389B3C208FFD9B0020EAD0 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					DC389B45208FFD9C0020EAD0 = {
@@ -199,6 +233,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC389B932090303B0020EAD0 /* DiskPersistence.swift in Sources */,
+				DC389B8B20902FA50020EAD0 /* URLConstructor.swift in Sources */,
+				DC389B9D20914E4D0020EAD0 /* String+Purse.swift in Sources */,
+				DC389B912090300F0020EAD0 /* FileName+Purse.swift in Sources */,
+				DC389B94209031580020EAD0 /* Purse.swift in Sources */,
+				DC389B98209039280020EAD0 /* CharacterSet+Purse.swift in Sources */,
+				DC389B8920902F780020EAD0 /* FolderCreator.swift in Sources */,
+				DC389B8F20902FF30020EAD0 /* FileName.swift in Sources */,
+				DC389B9F20915D820020EAD0 /* URL+Purse.swift in Sources */,
+				DC389B8D20902FC70020EAD0 /* PurseError.swift in Sources */,
+				DC389B96209034870020EAD0 /* FileManager+Purse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC389B9B20914D6E0020EAD0 /* URLConstructorTests.swift in Sources */,
 				DC389B65208FFE6D0020EAD0 /* DirectoryTests.swift in Sources */,
-				DC389B67208FFEF60020EAD0 /* Purse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +383,7 @@
 		DC389B52208FFD9C0020EAD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -350,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.harlankellaway.Purse;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,6 +405,7 @@
 		DC389B53208FFD9C0020EAD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -378,6 +426,7 @@
 		DC389B55208FFD9C0020EAD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -391,6 +440,7 @@
 		DC389B56208FFD9C0020EAD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

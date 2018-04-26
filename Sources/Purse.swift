@@ -23,12 +23,11 @@
 // THE SOFTWARE.
 //
 
-
 import Foundation
 
 // 👜 Purse
 /// A fashionable accessory to persist data to disk
-public struct Purse {
+public struct Purse: DiskPersistence {
     
     // MARK: - Types
     
@@ -60,6 +59,58 @@ public struct Purse {
                 return "<Application_Home>/tmp"
             }
         }
+    }
+    
+    // MARK: - Class properties
+    
+    /// Shared instance.
+    public static var shared = Purse()
+    
+    // MARK: - Properties
+    
+    /// File manager.
+    public let fileManager: FileManager
+    
+    /// Folder creator.
+    public let folderCreator: FolderCreator
+    
+    /// JSON encoding used to encode objects.
+    public let jsonEncoder: JSONEncoder
+    
+    /// Constructs URLs.
+    public let urlConstructor: URLConstructor
+    
+    // MARK: - Init
+    
+    public init(fileManager: FileManager = FileManager.default,
+                folderCreator: FolderCreator = PurseFolderCreator(),
+                jsonEncoder: JSONEncoder = JSONEncoder(),
+                urlConstructor: URLConstructor = PurseURLConstructor()) {
+        self.fileManager = fileManager
+        self.folderCreator = folderCreator
+        self.jsonEncoder = jsonEncoder
+        self.urlConstructor = urlConstructor
+    }
+    
+    // MARK: - Instance functions
+    
+    /// Persists Encodable object to disk as JSON.
+    ///
+    /// - Parameters:
+    ///   - object: Object to persist.
+    ///   - directory: Directory to persis object to.
+    ///   - fileName: File name to use for JSON file.
+    /// - Throws: Error if issue persisting object.
+    public func persist<T: Encodable>(_ object: T, to directory: Directory, fileName: FileName) throws {
+        guard !fileName.isDirectory() else {
+            throw PurseError.invalidFileName(value: fileName)
+        }
+        
+        let url = try urlConstructor.createURL(fileName: fileName, in: directory)
+        let data = try jsonEncoder.encode(object)
+        try folderCreator.createFolderIfNeeded(at: url)
+        try data.write(to: url, options: .atomic)
+        return
     }
     
 }

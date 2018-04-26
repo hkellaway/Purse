@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01416441935599B733FFFE25F0A5F908 /* Purse-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79112395A59BF62A538C570D320A4A6B /* Purse-dummy.m */; };
-		2366F0906160724C1336EAA30C00C516 /* Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CF5F6F0EE8C8B364E8D112CFB4BBA /* Purse.swift */; };
+		0A286FDF3FD81CC78C3518D7D8895698 /* FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E56B4DDFB99325B521C507EBFDD18 /* FileName.swift */; };
+		286A4BC4469796D2318A5756F4FBEF89 /* Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFFAA4083A55563DF63C5DDABBBB22 /* Purse.swift */; };
+		31400E60080B998BB69A5B9338C781F0 /* Purse-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD97D6C1B9839114178722B5DE902F40 /* Purse-dummy.m */; };
 		389E5AD0D884BA301A0C8CBC0914F7CA /* Pods-PurseDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C582D60AEBACFBE9E795DB5A834FFA19 /* Pods-PurseDemo-dummy.m */; };
+		3969E56A74E0AFB5D2CD4B901E24D15A /* DiskPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF49047B28BA72D99E94F63625F2544 /* DiskPersistence.swift */; };
 		4243258A94FE243623F7ECB1040093F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		54A2627A3F28C288CFBB834D239A459F /* FileManager+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC470495C85BF0E81068AB8C05BFC92 /* FileManager+Purse.swift */; };
+		721C4B2E2A1F478C1F8A10F2FD049F98 /* CharacterSet+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3080A93B29D8200757178987B2D56E /* CharacterSet+Purse.swift */; };
+		81132D68A87B0A501D7A58FEF05EC619 /* FileName+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F915E918367E31278F9F369B2A4ABF /* FileName+Purse.swift */; };
+		9CBB764249D239674801DC0425C810B9 /* String+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85815ED4F1060D927CD502D44DAD1615 /* String+Purse.swift */; };
 		A662BDDAC090309F578D180F9BE26A10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E1705881DBDB7788910D2E4739575B18 /* Purse-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBFC0BE56EB226DE8868636A0CC2025 /* Purse-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A78EE81033725B2FFF18F16112362A0B /* URLConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE31F8EB0013622BDDD56D9880AC74DF /* URLConstructor.swift */; };
+		DCC6F038AF2E2CA2709CF9D1CF4BB3D6 /* FolderCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD9703048AF0D6E64A020535B7EAF9 /* FolderCreator.swift */; };
+		E1705881DBDB7788910D2E4739575B18 /* Purse-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6D5C27D10025BF8175CC1E5D9970EF3 /* Purse-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDAD9786E7337B59D97FB196711B7C52 /* URL+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E84970E677CC0D33AE73DEA9207594 /* URL+Purse.swift */; };
 		F1E4FA868BAD85B2B386A1A4EECFADD0 /* Pods-PurseDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95E51B3D7C069367B568EADCE12FBDF8 /* Pods-PurseDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7E1C31A13C40E91CD423848AFC4616B /* PurseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCEF8F2CF88871F03C8A752B10FC1B5 /* PurseError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,26 +38,36 @@
 
 /* Begin PBXFileReference section */
 		00267B59C46C28DE869682028EE8B16C /* Pods-PurseDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PurseDemo-frameworks.sh"; sourceTree = "<group>"; };
+		19BE41418644F58440E44BA3428E39F4 /* Purse.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Purse.modulemap; sourceTree = "<group>"; };
+		38DFFAA4083A55563DF63C5DDABBBB22 /* Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Purse.swift; path = Sources/Purse.swift; sourceTree = "<group>"; };
 		3D0FC0A5FE3DFD6DF34516CEDBFD4FCB /* Pods-PurseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PurseDemo.release.xcconfig"; sourceTree = "<group>"; };
-		5C07FB5BFADC007C01DF6D13A293CA35 /* Purse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Purse.xcconfig; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		79112395A59BF62A538C570D320A4A6B /* Purse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Purse-dummy.m"; sourceTree = "<group>"; };
+		7A3080A93B29D8200757178987B2D56E /* CharacterSet+Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CharacterSet+Purse.swift"; path = "Sources/CharacterSet+Purse.swift"; sourceTree = "<group>"; };
+		8104C9848B8486164DE51F2C15267446 /* Purse-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Purse-prefix.pch"; sourceTree = "<group>"; };
 		84D0D4D856B507075C3720E25F3B19EF /* Pods-PurseDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PurseDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		85815ED4F1060D927CD502D44DAD1615 /* String+Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Purse.swift"; path = "Sources/String+Purse.swift"; sourceTree = "<group>"; };
 		8CB3F4CEF5E2059736DD91E3409D1560 /* Pods-PurseDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PurseDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		90E84970E677CC0D33AE73DEA9207594 /* URL+Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Purse.swift"; path = "Sources/URL+Purse.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95E51B3D7C069367B568EADCE12FBDF8 /* Pods-PurseDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PurseDemo-umbrella.h"; sourceTree = "<group>"; };
 		987DF1317D1F7ACC601EFBC6287896D1 /* Pods_PurseDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PurseDemo.framework; path = "Pods-PurseDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B4CF5F6F0EE8C8B364E8D112CFB4BBA /* Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Purse.swift; path = Sources/Purse.swift; sourceTree = "<group>"; };
-		9FBFC0BE56EB226DE8868636A0CC2025 /* Purse-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Purse-umbrella.h"; sourceTree = "<group>"; };
+		AAE06C7D0D39CE0ACBE152B76CD819F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADCEF8F2CF88871F03C8A752B10FC1B5 /* PurseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PurseError.swift; path = Sources/PurseError.swift; sourceTree = "<group>"; };
 		AE8397898CF3EAF0BC4A58F9109EF418 /* Pods-PurseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PurseDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BD97D6C1B9839114178722B5DE902F40 /* Purse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Purse-dummy.m"; sourceTree = "<group>"; };
 		C582D60AEBACFBE9E795DB5A834FFA19 /* Pods-PurseDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PurseDemo-dummy.m"; sourceTree = "<group>"; };
+		C7F915E918367E31278F9F369B2A4ABF /* FileName+Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileName+Purse.swift"; path = "Sources/FileName+Purse.swift"; sourceTree = "<group>"; };
 		C89C21809D8EBFCE2A207A10E797A5E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC63AEA547D6AB97F541DC547FC3B656 /* Pods-PurseDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PurseDemo.modulemap"; sourceTree = "<group>"; };
+		CCF49047B28BA72D99E94F63625F2544 /* DiskPersistence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskPersistence.swift; path = Sources/DiskPersistence.swift; sourceTree = "<group>"; };
 		D0F9575BEF8D622EEDEB32FE2FB824E3 /* Pods-PurseDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PurseDemo-resources.sh"; sourceTree = "<group>"; };
-		D5D05B4302AB535E92C3BB32CF45E451 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D66E56B4DDFB99325B521C507EBFDD18 /* FileName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileName.swift; path = Sources/FileName.swift; sourceTree = "<group>"; };
+		D6CD9703048AF0D6E64A020535B7EAF9 /* FolderCreator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FolderCreator.swift; path = Sources/FolderCreator.swift; sourceTree = "<group>"; };
+		D6D5C27D10025BF8175CC1E5D9970EF3 /* Purse-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Purse-umbrella.h"; sourceTree = "<group>"; };
 		DF4B58B3CAB248A331B0327A57E06E7F /* Purse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Purse.framework; path = Purse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF7628903004E3C556121586B186F179 /* Purse.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Purse.modulemap; sourceTree = "<group>"; };
-		EEB0F763DFFFA7DBE2CB0D03667DC076 /* Purse-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Purse-prefix.pch"; sourceTree = "<group>"; };
+		F8680ADD0B6459EDFB0F7EDA9B1C5155 /* Purse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Purse.xcconfig; sourceTree = "<group>"; };
+		FAC470495C85BF0E81068AB8C05BFC92 /* FileManager+Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileManager+Purse.swift"; path = "Sources/FileManager+Purse.swift"; sourceTree = "<group>"; };
+		FE31F8EB0013622BDDD56D9880AC74DF /* URLConstructor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLConstructor.swift; path = Sources/URLConstructor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,18 +90,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		70057B365A8692BF4B84788D8ADA5906 /* Support Files */ = {
+		17FDF39E490BFCD5F939B7A4810CE321 /* Purse */ = {
 			isa = PBXGroup;
 			children = (
-				D5D05B4302AB535E92C3BB32CF45E451 /* Info.plist */,
-				DF7628903004E3C556121586B186F179 /* Purse.modulemap */,
-				5C07FB5BFADC007C01DF6D13A293CA35 /* Purse.xcconfig */,
-				79112395A59BF62A538C570D320A4A6B /* Purse-dummy.m */,
-				EEB0F763DFFFA7DBE2CB0D03667DC076 /* Purse-prefix.pch */,
-				9FBFC0BE56EB226DE8868636A0CC2025 /* Purse-umbrella.h */,
+				7A3080A93B29D8200757178987B2D56E /* CharacterSet+Purse.swift */,
+				CCF49047B28BA72D99E94F63625F2544 /* DiskPersistence.swift */,
+				FAC470495C85BF0E81068AB8C05BFC92 /* FileManager+Purse.swift */,
+				D66E56B4DDFB99325B521C507EBFDD18 /* FileName.swift */,
+				C7F915E918367E31278F9F369B2A4ABF /* FileName+Purse.swift */,
+				D6CD9703048AF0D6E64A020535B7EAF9 /* FolderCreator.swift */,
+				38DFFAA4083A55563DF63C5DDABBBB22 /* Purse.swift */,
+				ADCEF8F2CF88871F03C8A752B10FC1B5 /* PurseError.swift */,
+				85815ED4F1060D927CD502D44DAD1615 /* String+Purse.swift */,
+				90E84970E677CC0D33AE73DEA9207594 /* URL+Purse.swift */,
+				FE31F8EB0013622BDDD56D9880AC74DF /* URLConstructor.swift */,
+				D513A5F40FCAA9212CA469EFEBDD33F4 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Demo/Pods/Target Support Files/Purse";
+			name = Purse;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		79E93639E48B916A73863F359C404F25 /* Pods-PurseDemo */ = {
@@ -106,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				9A4800A83D1B631CCB82D34753603786 /* Development Pods */,
+				E6C278EF7E640A580686F94A4C3806E2 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				8BAF60FA77D715C938CD4320C70C7953 /* Products */,
 				DEAF26C6680BD4E6B4796D8216C3F95E /* Targets Support Files */,
@@ -120,24 +146,6 @@
 				DF4B58B3CAB248A331B0327A57E06E7F /* Purse.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		993DC5A9C656463F4AC0A97717CA04A7 /* Purse */ = {
-			isa = PBXGroup;
-			children = (
-				9B4CF5F6F0EE8C8B364E8D112CFB4BBA /* Purse.swift */,
-				70057B365A8692BF4B84788D8ADA5906 /* Support Files */,
-			);
-			name = Purse;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		9A4800A83D1B631CCB82D34753603786 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				993DC5A9C656463F4AC0A97717CA04A7 /* Purse */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -156,12 +164,34 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		D513A5F40FCAA9212CA469EFEBDD33F4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAE06C7D0D39CE0ACBE152B76CD819F5 /* Info.plist */,
+				19BE41418644F58440E44BA3428E39F4 /* Purse.modulemap */,
+				F8680ADD0B6459EDFB0F7EDA9B1C5155 /* Purse.xcconfig */,
+				BD97D6C1B9839114178722B5DE902F40 /* Purse-dummy.m */,
+				8104C9848B8486164DE51F2C15267446 /* Purse-prefix.pch */,
+				D6D5C27D10025BF8175CC1E5D9970EF3 /* Purse-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Demo/Pods/Target Support Files/Purse";
+			sourceTree = "<group>";
+		};
 		DEAF26C6680BD4E6B4796D8216C3F95E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				79E93639E48B916A73863F359C404F25 /* Pods-PurseDemo */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E6C278EF7E640A580686F94A4C3806E2 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17FDF39E490BFCD5F939B7A4810CE321 /* Purse */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC36E1ED39E4F970283DCF66CA393583 /* Build configuration list for PBXNativeTarget "Purse" */;
 			buildPhases = (
-				4C5B2D293B04FB6130A70BE208097662 /* Sources */,
+				5F6584C5C1809387CD7D91AEB9EF1F7B /* Sources */,
 				1E92BC991A07BB7395E03507BD338C8B /* Frameworks */,
 				942CB98EA52F986704BAA6291E1FC2C8 /* Headers */,
 			);
@@ -249,12 +279,22 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C5B2D293B04FB6130A70BE208097662 /* Sources */ = {
+		5F6584C5C1809387CD7D91AEB9EF1F7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01416441935599B733FFFE25F0A5F908 /* Purse-dummy.m in Sources */,
-				2366F0906160724C1336EAA30C00C516 /* Purse.swift in Sources */,
+				721C4B2E2A1F478C1F8A10F2FD049F98 /* CharacterSet+Purse.swift in Sources */,
+				3969E56A74E0AFB5D2CD4B901E24D15A /* DiskPersistence.swift in Sources */,
+				54A2627A3F28C288CFBB834D239A459F /* FileManager+Purse.swift in Sources */,
+				81132D68A87B0A501D7A58FEF05EC619 /* FileName+Purse.swift in Sources */,
+				0A286FDF3FD81CC78C3518D7D8895698 /* FileName.swift in Sources */,
+				DCC6F038AF2E2CA2709CF9D1CF4BB3D6 /* FolderCreator.swift in Sources */,
+				31400E60080B998BB69A5B9338C781F0 /* Purse-dummy.m in Sources */,
+				286A4BC4469796D2318A5756F4FBEF89 /* Purse.swift in Sources */,
+				F7E1C31A13C40E91CD423848AFC4616B /* PurseError.swift in Sources */,
+				9CBB764249D239674801DC0425C810B9 /* String+Purse.swift in Sources */,
+				EDAD9786E7337B59D97FB196711B7C52 /* URL+Purse.swift in Sources */,
+				A78EE81033725B2FFF18F16112362A0B /* URLConstructor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +453,7 @@
 		};
 		2DB2F58BAC38C4A06CC6AA8A5F595A91 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C07FB5BFADC007C01DF6D13A293CA35 /* Purse.xcconfig */;
+			baseConfigurationReference = F8680ADD0B6459EDFB0F7EDA9B1C5155 /* Purse.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -445,7 +485,7 @@
 		};
 		483E4C1D0095EF46354260119F8E4F9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C07FB5BFADC007C01DF6D13A293CA35 /* Purse.xcconfig */;
+			baseConfigurationReference = F8680ADD0B6459EDFB0F7EDA9B1C5155 /* Purse.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
