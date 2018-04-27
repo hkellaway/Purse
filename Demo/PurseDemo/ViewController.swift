@@ -6,20 +6,19 @@
 //  Copyright © 2018 Harlan Kellaway. All rights reserved.
 //
 
+import Purse
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var diskPersistence: DiskPersistence = Purse.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let test1 = Test(id: 1, name: "Test 1")
+        try? diskPersistence.persist(test1, to: .temporary, fileName: "test1.json")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 

@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01416441935599B733FFFE25F0A5F908 /* Purse-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79112395A59BF62A538C570D320A4A6B /* Purse-dummy.m */; };
-		2366F0906160724C1336EAA30C00C516 /* Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CF5F6F0EE8C8B364E8D112CFB4BBA /* Purse.swift */; };
+		216B40297CCB882D3E2434999371BE7C /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D1F7AB30292B0F03C8C3282C07FF2F /* FileSystem.swift */; };
+		27270D3400B61A4F1C2923C04B73883E /* CharacterSet+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C54EDAFDA039705622DDA904D4EF8C /* CharacterSet+Purse.swift */; };
 		389E5AD0D884BA301A0C8CBC0914F7CA /* Pods-PurseDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C582D60AEBACFBE9E795DB5A834FFA19 /* Pods-PurseDemo-dummy.m */; };
 		4243258A94FE243623F7ECB1040093F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		4FE640550F15E537D926540526980AFF /* DiskPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD57CF850090310E2FE65F98CD601B /* DiskPersistence.swift */; };
 		A662BDDAC090309F578D180F9BE26A10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E1705881DBDB7788910D2E4739575B18 /* Purse-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBFC0BE56EB226DE8868636A0CC2025 /* Purse-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD7163C83513CACAEB57D2B717BCA8BF /* PurseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA34E071E6CB669B012EA0C0A4235D /* PurseError.swift */; };
+		E1705881DBDB7788910D2E4739575B18 /* Purse-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4900AF3379AED02B1637D074355555D /* Purse-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E59D9C18543A9CCB8F34795A7B814A5A /* FileName+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B77ACD774DC5EAAAE25D02E9A485E5 /* FileName+Purse.swift */; };
+		E7C7B253F3AD97DE7E41E0067EAE1CCC /* Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFA42FA44964C0CC067F8CE478CBD4 /* Purse.swift */; };
+		E841827B45E09AA42871A8692D622092 /* FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175A99349FF2104C602F468A58BFE9E /* FileName.swift */; };
+		EE8A9945B0AE6989A89495AE0B42F245 /* String+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E80C6169FE40F97314E9D83A3FD14 /* String+Purse.swift */; };
 		F1E4FA868BAD85B2B386A1A4EECFADD0 /* Pods-PurseDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95E51B3D7C069367B568EADCE12FBDF8 /* Pods-PurseDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F31985E6B5D06DA913FF83A535E17017 /* URL+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4ACE64B4D42651AB97AED8F85BDFA /* URL+Purse.swift */; };
+		F9675109A78F7658AAEBBEFE59FF44D3 /* Purse-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2CC14269B982363F97D6794F1AB7A3 /* Purse-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,26 +36,34 @@
 
 /* Begin PBXFileReference section */
 		00267B59C46C28DE869682028EE8B16C /* Pods-PurseDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PurseDemo-frameworks.sh"; sourceTree = "<group>"; };
+		00E4ACE64B4D42651AB97AED8F85BDFA /* URL+Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Purse.swift"; path = "Sources/URL+Purse.swift"; sourceTree = "<group>"; };
+		17BEE8246246B84F6D5B75772CB435E8 /* Purse-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Purse-prefix.pch"; sourceTree = "<group>"; };
+		21C54EDAFDA039705622DDA904D4EF8C /* CharacterSet+Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CharacterSet+Purse.swift"; path = "Sources/CharacterSet+Purse.swift"; sourceTree = "<group>"; };
+		35CD57CF850090310E2FE65F98CD601B /* DiskPersistence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskPersistence.swift; path = Sources/DiskPersistence.swift; sourceTree = "<group>"; };
 		3D0FC0A5FE3DFD6DF34516CEDBFD4FCB /* Pods-PurseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PurseDemo.release.xcconfig"; sourceTree = "<group>"; };
-		5C07FB5BFADC007C01DF6D13A293CA35 /* Purse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Purse.xcconfig; sourceTree = "<group>"; };
+		48DA34E071E6CB669B012EA0C0A4235D /* PurseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PurseError.swift; path = Sources/PurseError.swift; sourceTree = "<group>"; };
+		4A0E80C6169FE40F97314E9D83A3FD14 /* String+Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Purse.swift"; path = "Sources/String+Purse.swift"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		79112395A59BF62A538C570D320A4A6B /* Purse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Purse-dummy.m"; sourceTree = "<group>"; };
+		71B77ACD774DC5EAAAE25D02E9A485E5 /* FileName+Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileName+Purse.swift"; path = "Sources/FileName+Purse.swift"; sourceTree = "<group>"; };
+		7BBFA42FA44964C0CC067F8CE478CBD4 /* Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Purse.swift; path = Sources/Purse.swift; sourceTree = "<group>"; };
 		84D0D4D856B507075C3720E25F3B19EF /* Pods-PurseDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PurseDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8CB3F4CEF5E2059736DD91E3409D1560 /* Pods-PurseDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PurseDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95E51B3D7C069367B568EADCE12FBDF8 /* Pods-PurseDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PurseDemo-umbrella.h"; sourceTree = "<group>"; };
 		987DF1317D1F7ACC601EFBC6287896D1 /* Pods_PurseDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PurseDemo.framework; path = "Pods-PurseDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B4CF5F6F0EE8C8B364E8D112CFB4BBA /* Purse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Purse.swift; path = Sources/Purse.swift; sourceTree = "<group>"; };
-		9FBFC0BE56EB226DE8868636A0CC2025 /* Purse-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Purse-umbrella.h"; sourceTree = "<group>"; };
+		9C2CC14269B982363F97D6794F1AB7A3 /* Purse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Purse-dummy.m"; sourceTree = "<group>"; };
+		A175A99349FF2104C602F468A58BFE9E /* FileName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileName.swift; path = Sources/FileName.swift; sourceTree = "<group>"; };
+		A2331A48BC1C9065DD7C560448C99EE4 /* Purse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Purse.xcconfig; sourceTree = "<group>"; };
+		A4900AF3379AED02B1637D074355555D /* Purse-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Purse-umbrella.h"; sourceTree = "<group>"; };
 		AE8397898CF3EAF0BC4A58F9109EF418 /* Pods-PurseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PurseDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C582D60AEBACFBE9E795DB5A834FFA19 /* Pods-PurseDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PurseDemo-dummy.m"; sourceTree = "<group>"; };
 		C89C21809D8EBFCE2A207A10E797A5E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC63AEA547D6AB97F541DC547FC3B656 /* Pods-PurseDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PurseDemo.modulemap"; sourceTree = "<group>"; };
 		D0F9575BEF8D622EEDEB32FE2FB824E3 /* Pods-PurseDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PurseDemo-resources.sh"; sourceTree = "<group>"; };
-		D5D05B4302AB535E92C3BB32CF45E451 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF4B58B3CAB248A331B0327A57E06E7F /* Purse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Purse.framework; path = Purse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF7628903004E3C556121586B186F179 /* Purse.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Purse.modulemap; sourceTree = "<group>"; };
-		EEB0F763DFFFA7DBE2CB0D03667DC076 /* Purse-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Purse-prefix.pch"; sourceTree = "<group>"; };
+		DFF0CEB86C39436C659D7E1061FA2153 /* Purse.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Purse.modulemap; sourceTree = "<group>"; };
+		F6D1F7AB30292B0F03C8C3282C07FF2F /* FileSystem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileSystem.swift; path = Sources/FileSystem.swift; sourceTree = "<group>"; };
+		F710AA1B6DAD2DFD055F8B81A415CDCB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,18 +86,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		70057B365A8692BF4B84788D8ADA5906 /* Support Files */ = {
+		2644F8AD8C0C39056EB59927EB2CE24D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D5D05B4302AB535E92C3BB32CF45E451 /* Info.plist */,
-				DF7628903004E3C556121586B186F179 /* Purse.modulemap */,
-				5C07FB5BFADC007C01DF6D13A293CA35 /* Purse.xcconfig */,
-				79112395A59BF62A538C570D320A4A6B /* Purse-dummy.m */,
-				EEB0F763DFFFA7DBE2CB0D03667DC076 /* Purse-prefix.pch */,
-				9FBFC0BE56EB226DE8868636A0CC2025 /* Purse-umbrella.h */,
+				679B8763F306C2077FA4F0481F0C06DB /* Purse */,
 			);
-			name = "Support Files";
-			path = "Demo/Pods/Target Support Files/Purse";
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		679B8763F306C2077FA4F0481F0C06DB /* Purse */ = {
+			isa = PBXGroup;
+			children = (
+				21C54EDAFDA039705622DDA904D4EF8C /* CharacterSet+Purse.swift */,
+				35CD57CF850090310E2FE65F98CD601B /* DiskPersistence.swift */,
+				A175A99349FF2104C602F468A58BFE9E /* FileName.swift */,
+				71B77ACD774DC5EAAAE25D02E9A485E5 /* FileName+Purse.swift */,
+				F6D1F7AB30292B0F03C8C3282C07FF2F /* FileSystem.swift */,
+				7BBFA42FA44964C0CC067F8CE478CBD4 /* Purse.swift */,
+				48DA34E071E6CB669B012EA0C0A4235D /* PurseError.swift */,
+				4A0E80C6169FE40F97314E9D83A3FD14 /* String+Purse.swift */,
+				00E4ACE64B4D42651AB97AED8F85BDFA /* URL+Purse.swift */,
+				943E8AEC216765F7555EEE382596EA92 /* Support Files */,
+			);
+			name = Purse;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		79E93639E48B916A73863F359C404F25 /* Pods-PurseDemo */ = {
@@ -106,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				9A4800A83D1B631CCB82D34753603786 /* Development Pods */,
+				2644F8AD8C0C39056EB59927EB2CE24D /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				8BAF60FA77D715C938CD4320C70C7953 /* Products */,
 				DEAF26C6680BD4E6B4796D8216C3F95E /* Targets Support Files */,
@@ -122,22 +150,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		993DC5A9C656463F4AC0A97717CA04A7 /* Purse */ = {
+		943E8AEC216765F7555EEE382596EA92 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9B4CF5F6F0EE8C8B364E8D112CFB4BBA /* Purse.swift */,
-				70057B365A8692BF4B84788D8ADA5906 /* Support Files */,
+				F710AA1B6DAD2DFD055F8B81A415CDCB /* Info.plist */,
+				DFF0CEB86C39436C659D7E1061FA2153 /* Purse.modulemap */,
+				A2331A48BC1C9065DD7C560448C99EE4 /* Purse.xcconfig */,
+				9C2CC14269B982363F97D6794F1AB7A3 /* Purse-dummy.m */,
+				17BEE8246246B84F6D5B75772CB435E8 /* Purse-prefix.pch */,
+				A4900AF3379AED02B1637D074355555D /* Purse-umbrella.h */,
 			);
-			name = Purse;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		9A4800A83D1B631CCB82D34753603786 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				993DC5A9C656463F4AC0A97717CA04A7 /* Purse */,
-			);
-			name = "Development Pods";
+			name = "Support Files";
+			path = "Demo/Pods/Target Support Files/Purse";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -208,7 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC36E1ED39E4F970283DCF66CA393583 /* Build configuration list for PBXNativeTarget "Purse" */;
 			buildPhases = (
-				4C5B2D293B04FB6130A70BE208097662 /* Sources */,
+				FB907F650B7A203B252278AB0DCE9A85 /* Sources */,
 				1E92BC991A07BB7395E03507BD338C8B /* Frameworks */,
 				942CB98EA52F986704BAA6291E1FC2C8 /* Headers */,
 			);
@@ -249,20 +273,28 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C5B2D293B04FB6130A70BE208097662 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				01416441935599B733FFFE25F0A5F908 /* Purse-dummy.m in Sources */,
-				2366F0906160724C1336EAA30C00C516 /* Purse.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DC504DF22F3E1B24F9EAA09663F17957 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				389E5AD0D884BA301A0C8CBC0914F7CA /* Pods-PurseDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB907F650B7A203B252278AB0DCE9A85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27270D3400B61A4F1C2923C04B73883E /* CharacterSet+Purse.swift in Sources */,
+				4FE640550F15E537D926540526980AFF /* DiskPersistence.swift in Sources */,
+				E59D9C18543A9CCB8F34795A7B814A5A /* FileName+Purse.swift in Sources */,
+				E841827B45E09AA42871A8692D622092 /* FileName.swift in Sources */,
+				216B40297CCB882D3E2434999371BE7C /* FileSystem.swift in Sources */,
+				F9675109A78F7658AAEBBEFE59FF44D3 /* Purse-dummy.m in Sources */,
+				E7C7B253F3AD97DE7E41E0067EAE1CCC /* Purse.swift in Sources */,
+				DD7163C83513CACAEB57D2B717BCA8BF /* PurseError.swift in Sources */,
+				EE8A9945B0AE6989A89495AE0B42F245 /* String+Purse.swift in Sources */,
+				F31985E6B5D06DA913FF83A535E17017 /* URL+Purse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +445,7 @@
 		};
 		2DB2F58BAC38C4A06CC6AA8A5F595A91 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C07FB5BFADC007C01DF6D13A293CA35 /* Purse.xcconfig */;
+			baseConfigurationReference = A2331A48BC1C9065DD7C560448C99EE4 /* Purse.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -445,7 +477,7 @@
 		};
 		483E4C1D0095EF46354260119F8E4F9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C07FB5BFADC007C01DF6D13A293CA35 /* Purse.xcconfig */;
+			baseConfigurationReference = A2331A48BC1C9065DD7C560448C99EE4 /* Purse.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
