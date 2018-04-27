@@ -74,17 +74,12 @@ public struct Purse: DiskPersistence {
     /// JSON encoding used to encode objects.
     public let jsonEncoder: JSONEncoder
     
-    /// Constructs URLs.
-    public let urlConstructor: URLConstructor
-    
     // MARK: - Init
     
     public init(fileSystem: FileSystem = PurseFileSystem.shared,
-                jsonEncoder: JSONEncoder = JSONEncoder(),
-                urlConstructor: URLConstructor = PurseURLConstructor()) {
+                jsonEncoder: JSONEncoder = JSONEncoder()) {
         self.fileSystem = fileSystem
         self.jsonEncoder = jsonEncoder
-        self.urlConstructor = urlConstructor
     }
     
     // MARK: - Instance functions
@@ -101,10 +96,10 @@ public struct Purse: DiskPersistence {
             throw PurseError.invalidFileName(value: fileName)
         }
         
-        let data = try jsonEncoder.encode(object)
+        let jsonData = try jsonEncoder.encode(object)
         let url = try fileSystem.url(fileName: fileName, in: directory)
         try fileSystem.createDirectoryIfNeeded(at: url)
-        try data.write(to: url, options: .atomic)
+        try jsonData.write(to: url, options: .atomic)
         return
     }
     
