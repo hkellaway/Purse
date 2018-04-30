@@ -71,26 +71,26 @@ public struct Purse: DiskPersistence {
     /// File system.
     public let fileSystem: FileSystem
     
+    /// JSON decoding used to decode objects.
+    public let jsonDecoder: JSONDecoder
+    
     /// JSON encoding used to encode objects.
     public let jsonEncoder: JSONEncoder
     
     // MARK: - Init
     
     public init(fileSystem: FileSystem = PurseFileSystem.shared,
+                jsonDecoder: JSONDecoder = JSONDecoder(),
                 jsonEncoder: JSONEncoder = JSONEncoder()) {
         self.fileSystem = fileSystem
+        self.jsonDecoder = jsonDecoder
         self.jsonEncoder = jsonEncoder
     }
     
-    // MARK: - Instance functions
+    // MARK: - Protocol conformance
     
-    /// Persists Encodable object to disk as JSON.
-    ///
-    /// - Parameters:
-    ///   - object: Object to persist.
-    ///   - directory: Directory to persis object to.
-    ///   - fileName: File name to use for JSON file.
-    /// - Throws: Error if issue persisting object.
+    // MARK: DiskPeristence
+    
     public func persist<T: Encodable>(_ object: T, to directory: Directory, fileName: FileName) throws {
         guard !fileName.isDirectory() else {
             throw PurseError.invalidFileName(value: fileName)
@@ -101,6 +101,17 @@ public struct Purse: DiskPersistence {
         try fileSystem.createDirectoryIfNeeded(at: url)
         try jsonData.write(to: url, options: .atomic)
         return
+    }
+
+    public func retrieve<T: Decodable>(from directory: Directory, fileName: FileName, as objectType: T.Type) throws -> T {
+        guard !fileName.isDirectory() else {
+            throw PurseError.invalidFileName(value: fileName)
+        }
+        
+        let url = try fileSystem.url(fileName: fileName, in: directory)
+        let jsonData = try Data(contentsOf: url)
+        let object = try jsonDecoder.decode(objectType, from: jsonData)
+        return object
     }
     
 }

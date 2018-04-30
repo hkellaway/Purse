@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Test: Encodable {
+struct Test: Codable {
     
     let id: Int
     let name: String

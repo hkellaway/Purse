@@ -37,4 +37,15 @@ public protocol DiskPersistence {
     /// - Throws: Error if issue persisting.
     func persist<T: Encodable>(_ object: T, to directory: Purse.Directory, fileName: FileName) throws
     
+    /// Retrieves Decodable object from disk.
+    /// Object is expected to be represented as JSON.
+    ///
+    /// - Parameters:
+    ///   - directory: Directory object was persisted to.
+    ///   - fileName: File name used for JSON representation of object.
+    ///   - objectType: Type of object.
+    /// - Returns: Object retrieved from disk.
+    /// - Throws: Error if issue retrieving object.s
+    func retrieve<T: Decodable>(from directory: Purse.Directory, fileName: FileName, as objectType: T.Type) throws -> T
+    
 }
