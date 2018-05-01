@@ -2,11 +2,12 @@
 
 A fashionable accessory to persist data to disk.
 
-## Features :lipstick: 
+## Features 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/hkellaway/Purse.svg?branch=develop)](https://travis-ci.org/hkellaway/Purse)
 
-* Persisting `Codable` objects to disk
+:lipstick: Persisting `Codable` objects to disk<br />
+:lipstick: Retrieving `Codable` objects from disk
 
 ## Getting Started
 
@@ -32,20 +33,36 @@ github "hkellaway/Purse"
 
 ### Codable
 
-Let's say we have the following `Encodable` model:
+Let's say we have the following `Codable` model:
 
 ``` swift
-struct Test: Encodable {
+struct Test: Codable {
     let id: Int
     let name: String
 }
 ```
 
-We could persist the model to the `/tmp` directory on disk by calling the following:
+We can persist the model to the `/tmp` directory on disk by calling the following:
 
 ``` swift
 let test1 = Test(id: 1, name: "Test 1")
-Purse.shared.persist(test1, to: .temporary, fileName: "test1.json")
+try Purse.shared.persist(test1, to: .temporary, fileName: "test1.json")
+```
+
+Similarly, we could retrieve the model from disk by calling:
+
+```swift
+let test1 = try Purse.shared.retrieve(from: .temporary, fileName: "test1.json", as: Test.self)
+```
+
+## Advanced
+
+### Persisting in Other Formats But JSON
+
+When persisting `Codable` objets to disk, Purse uses JSON as the format by default. If your data is in a different format that can be transformed to `Data`, you can create your own object that conforms to `DataConverter` then parameterize Purse with it:
+
+```swift
+Purse.shared.dataConverter = MyDataConverter()
 ```
 
 ## Credits

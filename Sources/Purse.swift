@@ -27,7 +27,7 @@ import Foundation
 
 // 👜 Purse
 /// A fashionable accessory to persist data to disk
-public struct Purse: DiskPersistence {
+public class Purse: DiskPersistence {
     
     // MARK: - Types
     
@@ -68,23 +68,18 @@ public struct Purse: DiskPersistence {
     
     // MARK: - Properties
     
+    /// Converts objects to and from data to store on disk.
+    public var dataConverter: DataConverter
+    
     /// File system.
-    public let fileSystem: FileSystem
-    
-    /// JSON decoding used to decode objects.
-    public let jsonDecoder: JSONDecoder
-    
-    /// JSON encoding used to encode objects.
-    public let jsonEncoder: JSONEncoder
+    public var fileSystem: FileSystem
     
     // MARK: - Init
     
-    public init(fileSystem: FileSystem = PurseFileSystem.shared,
-                jsonDecoder: JSONDecoder = JSONDecoder(),
-                jsonEncoder: JSONEncoder = JSONEncoder()) {
+    public init(dataConverter: DataConverter = PurseJSONDataConverter(),
+                fileSystem: FileSystem = PurseFileSystem.shared) {
+        self.dataConverter = dataConverter
         self.fileSystem = fileSystem
-        self.jsonDecoder = jsonDecoder
-        self.jsonEncoder = jsonEncoder
     }
     
     // MARK: - Protocol conformance
@@ -96,10 +91,10 @@ public struct Purse: DiskPersistence {
             throw PurseError.invalidFileName(value: fileName)
         }
         
-        let jsonData = try jsonEncoder.encode(object)
+        let data = try dataConverter.objectToData(object)
         let url = try fileSystem.url(fileName: fileName, in: directory)
         try fileSystem.createDirectoryIfNeeded(at: url)
-        try jsonData.write(to: url, options: .atomic)
+        try fileSystem.write(data: data, toURL: url, options: .atomic)
         return
     }
 
@@ -109,8 +104,8 @@ public struct Purse: DiskPersistence {
         }
         
         let url = try fileSystem.url(fileName: fileName, in: directory)
-        let jsonData = try Data(contentsOf: url)
-        let object = try jsonDecoder.decode(objectType, from: jsonData)
+        let data = try Data(contentsOf: url)
+        let object: T = try dataConverter.objectFromData(data)
         return object
     }
     

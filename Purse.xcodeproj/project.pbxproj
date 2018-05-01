@@ -21,6 +21,7 @@
 		DC389B9D20914E4D0020EAD0 /* String+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B9C20914E4D0020EAD0 /* String+Purse.swift */; };
 		DC389B9F20915D820020EAD0 /* URL+Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389B9E20915D820020EAD0 /* URL+Purse.swift */; };
 		DC389BA420917E2C0020EAD0 /* FakeFileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389BA220917DE30020EAD0 /* FakeFileSystem.swift */; };
+		DC389BA62097E0DB0020EAD0 /* DataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC389BA52097E0DB0020EAD0 /* DataConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DC389B9C20914E4D0020EAD0 /* String+Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Purse.swift"; sourceTree = "<group>"; };
 		DC389B9E20915D820020EAD0 /* URL+Purse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Purse.swift"; sourceTree = "<group>"; };
 		DC389BA220917DE30020EAD0 /* FakeFileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFileSystem.swift; sourceTree = "<group>"; };
+		DC389BA52097E0DB0020EAD0 /* DataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				DC389B97209039280020EAD0 /* CharacterSet+Purse.swift */,
+				DC389BA52097E0DB0020EAD0 /* DataConverter.swift */,
 				DC389B922090303B0020EAD0 /* DiskPersistence.swift */,
 				DC389B8E20902FF30020EAD0 /* FileName.swift */,
 				DC389B902090300F0020EAD0 /* FileName+Purse.swift */,
@@ -236,6 +239,7 @@
 				DC389B94209031580020EAD0 /* Purse.swift in Sources */,
 				DC389B98209039280020EAD0 /* CharacterSet+Purse.swift in Sources */,
 				DC389B8920902F780020EAD0 /* FileSystem.swift in Sources */,
+				DC389BA62097E0DB0020EAD0 /* DataConverter.swift in Sources */,
 				DC389B8F20902FF30020EAD0 /* FileName.swift in Sources */,
 				DC389B9F20915D820020EAD0 /* URL+Purse.swift in Sources */,
 				DC389B8D20902FC70020EAD0 /* PurseError.swift in Sources */,
