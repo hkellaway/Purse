@@ -28,6 +28,14 @@ import Foundation
 /// Enables manipulation of files on disk.
 public protocol FileSystem {
     
+    /// Writes provided data to disk at url.
+    ///
+    /// - Parameters:
+    ///   - data: Data to write to disk.
+    ///   - url: URL to write to.
+    ///   - options: Writing options.
+    func write(data: Data, toURL url: URL, options: Data.WritingOptions) throws
+    
     /// Constructs URL given desired file name and Directory type.
     ///
     /// - Parameters:
@@ -91,6 +99,10 @@ public class PurseFileSystem: FileSystem {
     // MARK: - Protocol conformance
     
     // MARK: FileSystem
+    
+    public func write(data: Data, toURL url: URL, options: Data.WritingOptions) throws {
+        try data.write(to: url, options: options)
+    }
     
     public func url(fileName: FileName, in directory: Purse.Directory) throws -> URL {
         guard let path = fileName.prepareForUseInFilePath() else {

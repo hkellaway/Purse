@@ -27,7 +27,7 @@ import Foundation
 
 // 👜 Purse
 /// A fashionable accessory to persist data to disk
-public struct Purse: DiskPersistence {
+public class Purse: DiskPersistence {
     
     // MARK: - Types
     
@@ -68,39 +68,45 @@ public struct Purse: DiskPersistence {
     
     // MARK: - Properties
     
-    /// File system.
-    public let fileSystem: FileSystem
+    /// Converts objects to and from data to store on disk.
+    public var dataConverter: DataConverter
     
-    /// JSON encoding used to encode objects.
-    public let jsonEncoder: JSONEncoder
+    /// File system.
+    public var fileSystem: FileSystem
     
     // MARK: - Init
     
-    public init(fileSystem: FileSystem = PurseFileSystem.shared,
-                jsonEncoder: JSONEncoder = JSONEncoder()) {
+    public init(dataConverter: DataConverter = PurseJSONDataConverter(),
+                fileSystem: FileSystem = PurseFileSystem.shared) {
+        self.dataConverter = dataConverter
         self.fileSystem = fileSystem
-        self.jsonEncoder = jsonEncoder
     }
     
-    // MARK: - Instance functions
+    // MARK: - Protocol conformance
     
-    /// Persists Encodable object to disk as JSON.
-    ///
-    /// - Parameters:
-    ///   - object: Object to persist.
-    ///   - directory: Directory to persis object to.
-    ///   - fileName: File name to use for JSON file.
-    /// - Throws: Error if issue persisting object.
+    // MARK: DiskPeristence
+    
     public func persist<T: Encodable>(_ object: T, to directory: Directory, fileName: FileName) throws {
         guard !fileName.isDirectory() else {
             throw PurseError.invalidFileName(value: fileName)
         }
         
-        let jsonData = try jsonEncoder.encode(object)
+        let data = try dataConverter.objectToData(object)
         let url = try fileSystem.url(fileName: fileName, in: directory)
         try fileSystem.createDirectoryIfNeeded(at: url)
-        try jsonData.write(to: url, options: .atomic)
+        try fileSystem.write(data: data, toURL: url, options: .atomic)
         return
+    }
+
+    public func retrieve<T: Decodable>(from directory: Directory, fileName: FileName, as objectType: T.Type) throws -> T {
+        guard !fileName.isDirectory() else {
+            throw PurseError.invalidFileName(value: fileName)
+        }
+        
+        let url = try fileSystem.url(fileName: fileName, in: directory)
+        let data = try Data(contentsOf: url)
+        let object: T = try dataConverter.objectFromData(data)
+        return object
     }
     
 }
